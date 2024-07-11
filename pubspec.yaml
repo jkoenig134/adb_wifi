@@ -1,6 +1,6 @@
 name: adb_wifi
 description: A cli for attaching adb over wifi using a qr-code displayed in the terminal.
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/jkoenig134/adb_wifi
 
 environment:

@@ -7,7 +7,7 @@ A command-line application for attaching adb over wifi using a qr-code.
 ## Install
 
 ```bash
-pub global activate adb_wifi
+dart pub global activate adb_wifi
 ```
 
 ## Usage
