@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Fix: resolve IPv4 address before running adb pair command.
+
 ## 1.0.2
 
 - Update docs, add example.
