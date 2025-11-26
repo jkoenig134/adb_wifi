@@ -32,7 +32,22 @@ void _showQrCode({required String name, required String password}) {
 Future<({String address, int port})> _discover() async {
   const name = '_adb-tls-pairing._tcp.local';
 
-  final client = MDnsClient();
+  final client = MDnsClient(
+    rawDatagramSocketFactory: (
+      dynamic host,
+      int port, {
+      bool reuseAddress = true,
+      bool reusePort = true,
+      int ttl = 10000,
+    }) =>
+        RawDatagramSocket.bind(
+      host,
+      port,
+      reusePort: !Platform.isWindows && reusePort,
+      ttl: ttl,
+    ),
+  );
+
   await client.start();
 
   while (true) {
